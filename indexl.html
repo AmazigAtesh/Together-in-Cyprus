@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компания Arcobaleno - Организация детского отдыха на Кипре</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #E0E0E0, #A8D8D8); /* Светлый серый с мятным градиентом */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        header {
+            background: linear-gradient(135deg, #00B5D6, #008B6E); /* Перелив изумрудного */
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 0px 0px 10px rgba(0, 255, 255, 1); /* Неоновый эффект для заголовка */
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .section {
+            padding: 40px;
+            background-color: white;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .section h2 {
+            color: #00B5D6; /* Бирюзовый */
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 10px rgba(0, 255, 255, 1); /* Неоновый эффект для заголовков */
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .button {
+            background-color: #00B5D6; /* Бирюзовый */
+            color: white;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #FF007F; /* Фуксиевый */
+            transform: scale(1.1);
+        }
+
+        .contact-info {
+            background-color: #FFB6C1; /* Светлый розовый */
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 10px rgb(255, 255, 255); /* Неоновый эффект для заголовка контактной информации */
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Сдвигаем кнопки ниже */
+        .contact-info .btn {
+            background-color: #FF007F; /* Бирюзовый */
+            padding: 12px 24px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            margin: 40px 20px 10px; /* Увеличиваем отступ сверху для кнопок */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-info .btn:hover {
+            background-color: #FF007F; /* Фуксиевый */
+            transform: scale(1.1);
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 45%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Параллакс эффект */
+        .parallax {
+            position: relative;
+            background-image: url('img1.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            height: 400px;
+            transition: background-position 0.3s ease;
+        }
+
+        .parallax:hover {
+            background-position: center 40%;
+        }
+
+        /* Анимации */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Медиазапросы для адаптивности */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .section p {
+                font-size: 1em;
+            }
+
+            .button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+
+            .gallery img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .contact-info h3 {
+                font-size: 1.5em;
+            }
+
+            .contact-info p {
+                font-size: 1em;
+            }
+
+            .contact-info .btn {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            .section h2 {
+                font-size: 1.3em;
+            }
+
+            .section p {
+                font-size: 0.9em;
+            }
+
+            .button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            .contact-info h3 {
+                font-size: 1.2em;
+            }
+
+            .contact-info p {
+                font-size: 0.9em;
+            }
+
+            .contact-info .btn {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            .gallery img {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00B5D6; /* Бирюзовый */
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Компания Arcobaleno</h1>
+    <p>Более 20 лет организуем отдых для детей с ограниченными возможностями здоровья на Кипре</p>
+</header>
+
+<section class="section">
+    <h2>Оздоровление детей с ограниченными возможностями здоровья на Кипре</h2>
+    <p>Мы гордимся тем, что более 20 лет организуем отдых для детей с ограниченными возможностями здоровья на Кипре. Мы создаём условия, где каждый ребёнок может почувствовать заботу, внимание и поддержку. На нашей базе есть бассейн с подогревом и специально оборудованный доступ для детей с ОВЗ. Прекрасные горные пейзажи и чистый воздух помогают улучшить физическое состояние, а программы с животными (зло-терапия, иппотерапия) помогают детям почувствовать настоящую радость от общения с пушистыми и хвостатыми друзьями.</p>
+</section>
+
+<section class="section">
+    <h2>Проживание и доступность — забота о каждом ребёнке</h2>
+    <p>Наши виллы и отели оснащены всем необходимым для удобного проживания: специализированные кровати, стулья и ванные комнаты. Мы уделяем внимание каждой детали, чтобы дети чувствовали себя в безопасности и уюте, а также имели доступ ко всем удобствам, необходимым для полноценного отдыха и реабилитации.</p>
+</section>
+
+<section class="section">
+    <h2>Творчество и спорт — важные элементы отдыха для детей с ОВЗ</h2>
+    <p>Мы предлагаем разнообразные творческие мастер-классы, такие как рисование, лепка, участие в театральных постановках. Также у нас проходят спортивные мероприятия с элементами адаптивного спорта, которые способствуют развитию координации, гибкости и силы. Музыкальные занятия, уроки игры на инструментах, а также пение помогают детям раскрыть свой творческий потенциал и почувствовать гармонию.</p>
+</section>
+
+<section class="gallery">
+    <img src="img1.jpg" alt="Море 1">
+    <img src="img2.jpg" alt="Море 2">
+    <img src="img3.jpg" alt="Лагерь 1">
+    <img src="img4.jpg" alt="Лагерь 2">
+</section>
+
+<div class="contact-info">
+    <h3>Контактная информация</h3>
+    <p><strong>Директор компании:</strong> Алексахина Лена</p>
+    <p><strong>Телефон (Кипр):</strong> +357 97 725285</p>
+    <p><strong>Представитель компании в РФ:</strong> Станева Ольга</p>
+    <p><strong>Телефон (РФ):</strong> +7 903 515-57-61</p>
+    <a href="tel:+35797725285" class="btn">Позвонить (Кипр)</a>
+    <a href="tel:+79035155761" class="btn">Позвонить (РФ)</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 Компания Arcobaleno - Организация детского отдыха на Кипре</p>
+</footer>
+
+</body>
+</html>
